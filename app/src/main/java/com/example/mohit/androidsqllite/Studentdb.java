@@ -49,7 +49,7 @@ public class Studentdb extends SQLiteOpenHelper {
     }
 
     public void addStudent(Student student){
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getWriteableDatabase();
         ContentValues values = new ContentValues();
 
         values.put(Col_Id,student.getId());
